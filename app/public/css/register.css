@@ -1,0 +1,160 @@
+.formGroup {
+    margin-bottom: 14px;
+}
+
+.inputGroupLabel {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    position: relative;
+}
+
+.formGroup .fieldErrorMessage {
+    color: #ff1744;
+    opacity: 0;
+    transition: 300ms ease;
+    font-size: 12px;
+    fill: #ff1744;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    margin-top: 7px;
+}
+
+.formGroup .raiseError .fieldErrorMessage {
+    opacity: 1;
+    visibility: visible;
+}
+
+.formGroup .raiseError input {
+    box-shadow: 0 0 0 1px #ff1744;
+}
+
+.fieldErrorMessageIcon {
+    height: 16px;
+    margin-right: 4px;
+    width: 16px;
+}
+
+.registerFormFooter {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.footerLink {
+    color: #ffd740;
+    transition: 300ms ease;
+    display: inline-block;
+}
+
+.footerLink:hover {
+    transform: translateY(-3px);
+    color: #ffc400;
+}
+.formRow {
+    display: flex;
+    position: relative;
+}
+
+.logoContainer {
+    align-items: center;
+    display: flex;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.registerPageHeaderContainer {
+    margin-bottom: 48px;
+}
+
+.registerFormTitle {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    white-space: nowrap;
+    max-width: 600px;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.registerFormTitle::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #212121;
+    margin-right: 32px;
+}
+
+.registerFormTitle::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #212121;
+    margin-left: 32px;
+}
+
+button[type="submit"] {
+    margin: 0 auto;
+    background-color: #ffd740;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 14px 0;
+    border-radius: 7px;
+    transition: all 300ms ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #ffc400;
+    box-shadow: 0 0 0 2px #ffc400;
+}
+
+.registerFormContainer {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.emailMismatchErrorMessage {
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    bottom: 12px;
+    left: 0;
+    font-size: 12px;
+    color: #ff1744;
+    display: flex;
+}
+
+.raiseErrorEmailMismatch .emailMismatchErrorMessage {
+    visibility: visible;
+    opacity: 1;
+}
+
+.py-7 {
+    padding: 28px 0;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.errorMessage__moH1rR {
+    display: flex;
+    align-items: center;
+    font-family: "Clash Display";
+    font-size: 12px;
+    color: #ff1744;
+    margin-bottom: 14px;
+}
+
+.errorMessageIcon__moH1rR {
+    width: 18px;
+    height: 18px;
+    margin-right: 7px;
+}

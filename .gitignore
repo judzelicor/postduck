@@ -1,0 +1,8 @@
+# MacOS Generated Files
+.DS_Store
+
+# JetBrains Generated Files
+.idea/
+
+# Node.js
+node_modules

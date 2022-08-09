@@ -1,0 +1,21 @@
+<%- include ("components/head.ejs") %>
+
+<body>
+    <h2>Login</h2>
+    <div class="errorMessageContainer">
+        <p class="errorMessage"></p>
+    </div>
+    <form id="loginForm" action="/login" method="post">
+        <input class="usernameField" type="text" name="username" />
+        <input class="passwordField" type="password" name="password" placeholder="Enter your password" />
+        <button id="loginFormSubmitButton" type="submit">Submit</button>
+    </form>
+    <div>
+        <p>Don't have an account?</p>
+        <button>
+            <p>Sign up for free <a href="/signup">here</a> and start quacking.</p>
+        </button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/js/login.js"></script>
+</body>

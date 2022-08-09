@@ -1,0 +1,10 @@
+button[type="submit"] {
+    background-color: var(--bg-signup-button);
+    border-radius: 50px;
+    color: var(--fg-signup-button);
+    font-family: "Clash Display";
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.5em 2em;
+}

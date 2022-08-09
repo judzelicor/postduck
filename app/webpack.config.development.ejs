@@ -1,0 +1,18 @@
+const path = require("path");
+
+module.exports = {
+    mode: "development",
+    entry: {
+        home: "./src/home.js",
+        login: "./src/login.js",
+        fslJNqqRjsw9: "./src/landing.js",
+        Z4kWExdRoiMA: "./src/signup.js",
+        pmvPvqNj9AnB: "./src/clientSocket.js",
+        abR2hlcshZGl: "./src/userProfile.js"
+    },
+    output: {
+        filename: "[name].js",
+        path: path.resolve(__dirname, "public", "js")
+    },
+    watch: true
+}

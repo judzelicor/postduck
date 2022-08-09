@@ -1,0 +1,141 @@
+<%- include ("components/head.ejs") %>
+<body>
+    <div class="flex flex-col items-center justify-center w-water py-7">
+        <header class="registerPageHeaderContainer">
+            <div class="logoContainer">
+                <div class="logoImageFence">
+                    <img src="/postduck-logo.png" />
+                </div>
+            </div>
+        </header>
+        <div class="flex flex-col items-center w-water">
+            <h1 class="registerFormTitle">Sign up with your email address</h1>
+            <div class="registerFormContainer">
+                <div class="errorMessage__moH1rR"></div>
+                <form id="registerForm" method="POST">
+                    <div class="formRow">
+                        <div class="formGroup mr-7">
+                            <div class="firstNameFormField">
+                                <label for="firstName" class="inputGroupLabel">What's your first name?</label>
+                                <% if (formValues) { %>
+                                    <input id="firstName" name="firstName" type="text" placeholder="Enter your first name." value=<%= formValues.firstName %> required />
+                                <% } else { %>
+                                    <input id="firstName" name="firstName" type="text" placeholder="Enter your first name." value="" required />
+                                <% } %>
+                                <div class="fieldErrorMessage">
+                                    <div class="fieldErrorMessageIcon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                            <path fill="#ff6174" d="M16 1C7.72 1 1 7.72 1 16s6.72 15 15 15 15-6.72 15-15S24.28 1 16 1zm0 24c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm2.29-15.51-.67 8.02c-.07.84-.77 1.49-1.62 1.49s-1.55-.65-1.62-1.49l-.67-8.02C13.6 8.15 14.65 7 16 7a2.3 2.3 0 0 1 2.3 2.3c0 .06 0 .13-.01.19z"/>
+                                        </svg>
+                                    </div>
+                                    <p>You need to enter your first name.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formGroup">
+                            <div class="lastNameFormField">
+                                <label for="lastName" class="inputGroupLabel">What's your last name?</label>
+                                <% if (formValues) { %>
+                                    <input id="lastName" name="lastName" type="text" placeholder="Enter your last name." value=<%= formValues.lastName %> required />
+                                <% } else { %>
+                                    <input id="lastName" name="lastName" type="text" placeholder="Enter your last name." value="" required />
+                                <% } %>
+                                <div class="fieldErrorMessage">
+                                    <div class="fieldErrorMessageIcon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                            <path fill="#ff6174" d="M16 1C7.72 1 1 7.72 1 16s6.72 15 15 15 15-6.72 15-15S24.28 1 16 1zm0 24c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm2.29-15.51-.67 8.02c-.07.84-.77 1.49-1.62 1.49s-1.55-.65-1.62-1.49l-.67-8.02C13.6 8.15 14.65 7 16 7a2.3 2.3 0 0 1 2.3 2.3c0 .06 0 .13-.01.19z"/>
+                                        </svg>
+                                    </div>
+                                    <p>You need to enter your last name.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formRow emailFormRow">
+                        <div class="formGroup mr-7">
+                            <div class="emailFormField">
+                                <label for="email" class="inputGroupLabel">What's your email?</label>
+                                <input id="email" name="email" type="email" placeholder="Enter your email." required />
+                                <div class="fieldErrorMessage">
+                                    <div class="fieldErrorMessageIcon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                            <path fill="#ff6174" d="M16 1C7.72 1 1 7.72 1 16s6.72 15 15 15 15-6.72 15-15S24.28 1 16 1zm0 24c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm2.29-15.51-.67 8.02c-.07.84-.77 1.49-1.62 1.49s-1.55-.65-1.62-1.49l-.67-8.02C13.6 8.15 14.65 7 16 7a2.3 2.3 0 0 1 2.3 2.3c0 .06 0 .13-.01.19z"/>
+                                        </svg>
+                                    </div>
+                                    <p>You need to enter your email.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formGroup">
+                            <div class="emailConfirmationFormField">
+                                <label for="emailConfirmation" class="inputGroupLabel">Confirm your email.</label>
+                                <input id="emailConfirmation" name="emailConfirmation" type="email" placeholder="Enter your email again." required />
+                                <div class="fieldErrorMessage">
+                                    <div class="fieldErrorMessageIcon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                            <path fill="#ff6174" d="M16 1C7.72 1 1 7.72 1 16s6.72 15 15 15 15-6.72 15-15S24.28 1 16 1zm0 24c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm2.29-15.51-.67 8.02c-.07.84-.77 1.49-1.62 1.49s-1.55-.65-1.62-1.49l-.67-8.02C13.6 8.15 14.65 7 16 7a2.3 2.3 0 0 1 2.3 2.3c0 .06 0 .13-.01.19z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formGroup w-water">
+                        <div class="passwordFormField">
+                            <label for="password" class="inputGroupLabel">Secure your account.</label>
+                            <input id="password" name="password" type="password" placeholder="Create a password." class="w-water" required />
+                            <div class="fieldErrorMessage">
+                                <div class="fieldErrorMessageIcon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path fill="#ff6174" d="M16 1C7.72 1 1 7.72 1 16s6.72 15 15 15 15-6.72 15-15S24.28 1 16 1zm0 24c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm2.29-15.51-.67 8.02c-.07.84-.77 1.49-1.62 1.49s-1.55-.65-1.62-1.49l-.67-8.02C13.6 8.15 14.65 7 16 7a2.3 2.3 0 0 1 2.3 2.3c0 .06 0 .13-.01.19z"/>
+                                    </svg>
+                                </div>
+                                <p>You need to enter a password.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formGroup w-water">
+                        <div class="nicknameFormField">
+                            <label for="nickname" class="inputGroupLabel">What should we call you?</label>
+                            <input id="nickname" name="nickname" type="text" placeholder="This will appear in your profile." class="w-water" required />
+                            <div class="fieldErrorMessage">
+                                <div class="fieldErrorMessageIcon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path fill="#ff6174" d="M16 1C7.72 1 1 7.72 1 16s6.72 15 15 15 15-6.72 15-15S24.28 1 16 1zm0 24c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm2.29-15.51-.67 8.02c-.07.84-.77 1.49-1.62 1.49s-1.55-.65-1.62-1.49l-.67-8.02C13.6 8.15 14.65 7 16 7a2.3 2.3 0 0 1 2.3 2.3c0 .06 0 .13-.01.19z"/>
+                                    </svg>
+                                </div>
+                                <p>Enter a valid name for your profile.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formGroup w-water">
+                        <div class="usernameFormField">
+                            <label for="username" class="inputGroupLabel">Choose your username.</label>
+                            <input id="username" name="username" type="text" placeholder="This will appear in your interactions." class="w-water" required />
+                            <div class="fieldErrorMessage">
+                                <div class="fieldErrorMessageIcon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path fill="#ff6174" d="M16 1C7.72 1 1 7.72 1 16s6.72 15 15 15 15-6.72 15-15S24.28 1 16 1zm0 24c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm2.29-15.51-.67 8.02c-.07.84-.77 1.49-1.62 1.49s-1.55-.65-1.62-1.49l-.67-8.02C13.6 8.15 14.65 7 16 7a2.3 2.3 0 0 1 2.3 2.3c0 .06 0 .13-.01.19z"/>
+                                    </svg>
+                                </div>
+                                <p>Enter a valid name username.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button  id="submitButton" class="signupButton" type="submit">Sign up</button>
+                </form>
+            </div>
+            <div class="registerFormFooter text-center">
+                <p class="mb-3">Already have an account?</p>
+                <button class="m-auto">
+                    <p>Log in to your account <a class="footerLink" href="/login">here</a>.</p>
+                </button>
+            </div>
+            <div>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="module" src="/js/Z4kWExdRoiMA.js"></script>
+</body>
